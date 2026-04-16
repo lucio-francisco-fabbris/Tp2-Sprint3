@@ -15,6 +15,7 @@ export async function nuevoSuperHeroesController(req, res) {
         const nuevoSuperHero = await nuevoSuperHeroes(data);
         res.status(201).json(nuevoSuperHero);
     } catch (error) {
+        console.log("ERROR REAL:", error);
         res.status(500).json({ error: "Error al crear el superhéroe"});
     }
 };
